@@ -33,7 +33,7 @@ const LoginPage = () => {
         <h2>BookBank</h2>
         <h4>Login</h4>
         <p>
-          A library management system is a computerized information system that supports the management of library resources, including their acquisition, representation, and circulation. It is composed of interconnected subsystems that work together to achieve the common purpose of efficiently managing library operations.
+          A library management system is a computerized information system that supports the management of library resources, including their acquisition, representation, and circulation.
         </p>
         <span>
           Don't you have an account?{" "}

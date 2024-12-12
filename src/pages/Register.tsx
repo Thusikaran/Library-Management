@@ -14,7 +14,7 @@ const Register = () => {
     //const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
     const validate = () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
         let isValid = true;
@@ -89,7 +89,7 @@ const Register = () => {
             <img src={img} alt="" />
             <h2>BookBank</h2>
             <h4>SignUp</h4>
-            <p>A library management system is a computerized information system that supports the management of library resources, including their acquisition, representation, and circulation. It is composed of interconnected subsystems that work together to achieve the common purpose of efficiently managing library operations</p>
+            <p>A library management system is a computerized information system that supports the management of library resources</p>
             <span>Do you have an account <u onClick={()=>navigate("/")}>Login</u></span>
         </div>
         <div className='page-right'>
