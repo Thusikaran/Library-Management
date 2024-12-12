@@ -1,0 +1,103 @@
+.page{
+   margin: 0;
+   padding: 0;
+   display: flex;
+   width: 100vw;
+}
+.page-left{
+    background-color: black;
+    width: 50vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page-left img {
+    height: 200px;
+    width: 200px;
+}
+.page-left p{
+    margin: 40px 100px;
+    text-align: center;
+}
+.page-left h2{
+    margin: 0px;
+    padding: 0;
+}
+.page-left h4{
+    margin: 0px;
+    padding: 0;
+}
+.page-left span{
+    font-size: 1rem;
+}
+.page-left span u{
+    color: aqua;
+    cursor: pointer;
+}
+
+.page-right{
+    background-color: White;
+    width: 50vw;
+    height: 100vh;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 37px;
+}
+.page-right .inputBox{
+    display: flex;
+    flex-direction: column;
+}
+.page-right .inputBox span{
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    white-space: normal; 
+}
+.page-right .input{
+   border-radius: 9.11px;
+   height: 50px;
+   width: 450px;
+   background-color: white;
+   border: solid 2px;
+   border-color: #888888;
+   font-size: 15px;
+   padding: 0 15px;
+   color:black ;
+  
+}
+.page-right .errorInput{
+    border-radius: 9.11px;
+    height: 50px;
+    width: 450px;
+    background-color: white;
+    border: solid 2px;
+    border-color: red;
+    font-size: 15px;
+    padding: 0 15px;
+    color: black;
+
+   
+ }
+.page-right button{
+    border-radius: 9.11px;
+    height: 50px;
+    width: 480px;
+    background-color: black;
+    font-size: 15px;
+    border: solid 2px black;
+    cursor: pointer;
+}
+.error{
+    height: 50px;
+    width: 480px;
+    background-color: pink;
+    color: red; 
+    border-radius: 9.11px;
+    
+}

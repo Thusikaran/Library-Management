@@ -1,0 +1,4 @@
+// interface example {
+//     name:string,
+
+// }
