@@ -99,5 +99,7 @@
     background-color: pink;
     color: red; 
     border-radius: 9.11px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

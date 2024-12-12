@@ -1,0 +1,251 @@
+.book{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 97.8vh;
+    display: flex;
+    background-color: #f2f2f2;
+    color: black;
+}
+.book-sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    background-color: black;
+    color: white;
+}
+.book-sidebar-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.book-sidebar-logo img{
+    height: 77px;
+    width: 77px;
+    margin-top: 50px;
+}
+.book-sidebar-logo h3{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.sidebar-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar-links .icon{
+    font-size: 22px;
+    margin-left: 10px;
+
+}
+.sidebar-links span{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.links-top{
+
+
+}
+.links-bottem{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   width: 200px;
+   height: 40px;
+   cursor: pointer;
+   margin-top: 38vh;
+   
+}
+.links-bottem:hover{
+    border: solid 1px white;
+    border-radius: 10px;
+}
+.links-link{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   width: 200px;
+   height: 40px;
+   cursor: pointer;
+   margin-top: 5px;
+  
+}
+.links-link:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+
+}
+.links-link-select{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+   
+ }
+
+ .body{
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+    height: 60px;
+    background-color: white;
+ }
+ .topbar{
+    display: flex;
+    justify-content: space-between;
+
+ }
+ .top-searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+ .top-searchbar input{
+    height: 36px;
+    margin-left: 20px;
+    padding: 0 20px 0 40px;
+    width: 300px;
+    border-radius: 6px;
+    border: solid 1px white;
+    background-color: black;
+ }
+ .icon1{
+    position: absolute;
+    left: 33px;
+    color: white;
+ }
+ .top-userdata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .icon-bell{
+    font-size: 22px;
+    padding:10px 10px;
+    border-right: solid 2px black;
+ }
+ .top-userdata span{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 700;
+ }
+ .top-userdata p{
+    margin-right: 30px;
+    font-weight: 700;
+    background-color: black;
+    color: #f2f2f2;
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 0;
+    cursor: pointer;
+}
+.middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.middle h3{
+    margin-left: 20px;
+}
+.middle .addbutton{
+   position: relative;
+}
+.addbutton button{
+    height: 36px;
+    margin-left: 20px;
+    padding: 0 20px 0 40px;
+    width: 150px;
+    border-radius: 6px;
+    border: solid 1px white;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.addbutton .icon-plus{
+    position: absolute;
+    left: 33px;
+    color: white;
+    top: 10px;
+}
+ .content{
+
+ }
+ .content-table{
+    width: 94%;
+    margin: 0 1.5%;
+    padding: 15px 1.5%  10px 1.5%;
+    background-color: white;
+    border-radius: 10px;
+ }
+ .table-title{
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+ }
+ .table-title div{
+   margin-left: 15px;
+ }
+ .table-data{
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 8px;
+ }
+ .id{
+    width: 5%;
+    display: flex;
+    justify-content: start;
+
+ }
+ .title{
+    width: 20%;
+    display: flex;
+    justify-content: start;
+ }
+ .author{
+    width: 20%;
+    display: flex;
+    justify-content: start;
+ }
+ .description{
+    width: 45%;
+    display: flex;
+    justify-content: start;
+ }
+ .action{
+    width: 10%;
+    display: flex;
+    justify-content: start;
+ }
+
+ .table-data .id{
+    margin-left: 15px;
+
+ } 
+
+ .action .icon3{
+    font-size: 20px;
+    color: black;
+    margin-right: 7px;
+    cursor: pointer;
+ }

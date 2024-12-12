@@ -2,6 +2,7 @@ import "./Register.css"
 import img from "../assets/img/book.png"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
     const[userName,setUserName]=useState("");
@@ -52,22 +53,34 @@ const Register = () => {
         return isValid;
     };
 
-    const handleSubmit =()=>{
+    const handleSubmit =async()=>{
         if (validate()) {
             const data = {
-                username: userName,
+                username: userName.toLowerCase(),
                 email: email,
                 password: password,
             };
-            window.alert(`Registration Successful!\nEmail: ${data.email}`);
-
-            setUserName("");
-            setEmail("");
-            setPassword("");
-            setUserNameError("");
-            setEmailError("");
-            setPasswordError("");
+         
+      try {
+        const response = await axios.post("http://localhost:5127/api/account/register", data);
+        if (response.status === 200) {
+          window.alert("Registration Successful!");
+          navigate("/");
+        } else {
+          window.alert("Registration failed. Please try again.");
         }
+      } catch (error) {
+        console.error("Registration Error: ", error);
+        window.alert("An error occurred. Please try again later.");
+      }
+
+      setUserName("");
+      setEmail("");
+      setPassword("");
+      setUserNameError("");
+      setEmailError("");
+      setPasswordError("");
+    }
 
     }
   return (

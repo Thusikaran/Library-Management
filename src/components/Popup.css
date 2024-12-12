@@ -1,0 +1,107 @@
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    height: 60vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .addbook-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 2px #D7D7D7;
+    margin-bottom: 30px;
+  }
+  .addbook-title .icon-box{
+    width: 50px;
+    height: 50px;
+    background-color: #D7D7D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .icon-box .icon-book{
+    font-size: 25px;
+  }
+  .inputBox1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .inputBox1 input{
+    border-radius: 9.11px;
+   height: 50px;
+   width: 450px;
+   background-color: white;
+   border: solid 2px;
+   border-color: #888888;
+   font-size: 15px;
+   padding: 0 15px;
+   color:black ;
+  }
+  .inputBox1 textarea{
+    border-radius: 9.11px;
+    height: 80px;
+    width: 450px;
+    background-color: white;
+    border: solid 2px;
+    border-color: #888888;
+    font-size: 15px;
+    padding: 4px 15px;
+    color:black ;
+  }
+  .popup-button{
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+  }
+  .popup-button .add{
+    border-radius: 9.11px;
+    height: 50px;
+    width: 46%;
+    background-color: black;
+    font-size: 15px;
+    border: solid 2px black;
+    cursor: pointer;
+    margin-right: 4%;
+
+  }
+  .close{
+    background-color: #D7D7D7;
+    color: black;
+    border-radius: 9.11px;
+    height: 50px;
+    width: 46%;
+    font-size: 15px;
+    border: none;
+    /* border: solid 2px black; */
+    cursor: pointer;
+    margin-right: 4%;
+  }
+  
