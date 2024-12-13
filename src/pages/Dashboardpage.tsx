@@ -48,7 +48,7 @@ const Dashboardpage = () => {
         </div>
 
         <div>
-            <h1>Dashboard Page</h1>
+            <h1 className="main-title">Dashboard Page</h1>
         </div>
     </div>
   )

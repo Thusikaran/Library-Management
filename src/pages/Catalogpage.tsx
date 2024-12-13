@@ -48,7 +48,7 @@ const Catalogpage = () => {
         </div>
 
         <div>
-           <h1>Catalog Page</h1>
+           <h1 className="main-title">Catalog Page</h1>
         </div>
     </div>
   )

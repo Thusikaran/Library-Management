@@ -71,6 +71,17 @@ export const updateBook = async (book: { title: string; author: string; descript
     }
 };
 
+export const searchByTitle = async (search: string) => {
+  try {
+    const response = await axios.get(`http://localhost:5127/api/Book/search/${search}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    throw error; 
+  }
+};
+
+
 export const logout = () => {
   localStorage.removeItem("token");
 };

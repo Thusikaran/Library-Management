@@ -48,7 +48,7 @@ const Settingpage = () => {
         </div>
 
         <div>
-            <h1>SettingPage</h1>
+            <h1 className="main-title">SettingPage</h1>
         </div>
     </div>
   )

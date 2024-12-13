@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 import AddBookPopup from "../components/AddBookPopup";
 import UpdateBookPopup from "../components/UpdateBookPopup";
 import DeleteBookPopup from "../components/DeleteBookPopup";
-import { getAllBooks, logout } from "../services/Service";
+import { getAllBooks, logout, searchByTitle } from "../services/Service";
 
 const BookPage = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -26,6 +26,7 @@ const BookPage = () => {
     const [selectedBook, setSelectedBook] = useState<any>(null); 
     const [bookId,setBookId]=useState<any>(null);
     const username = localStorage.getItem("username");
+    const [search, setSearch] = useState<String>("");
     console.log(username);
     const navigate = useNavigate();
 
@@ -49,22 +50,40 @@ const BookPage = () => {
     };
 
     useEffect(() => {
-        const fetchBooks = async () => {
-            try {
-                const books = await getAllBooks();
-                setBook(books);
-                console.log(books); 
-            } catch (error) {
-                console.error("Failed to fetch books:", error);
-            }
-        };
-        fetchBooks();
-    }, []); 
+        if(search == "")
+        {
+            const fetchBooks = async () => {
+                try {
+                    const books = await getAllBooks();
+                    setBook(books);
+                    console.log(books); 
+                } catch (error) {
+                    console.error("Failed to fetch books:", error);
+                }
+            };
+            fetchBooks();
+        }
+        else
+        {
+            const searchBooksByTitle = async (search: any) => {
+                try {
+                  const data = await searchByTitle(search);
+                  setBook(data);
+                  console.log(data); 
+                } catch (error) {
+                  console.error("Failed to search books:", error);
+                }
+              };
+              
+              searchBooksByTitle(search); 
+        }
+    }, [search]); 
 
     const handleLogout = () => {
         logout();
         navigate("/");
       };
+
 
 
     return (
@@ -103,7 +122,7 @@ const BookPage = () => {
             <div className="body">
                 <div className="topbar">
                     <div className="top-searchbar">
-                        <input type="text" placeholder="Search by Title" />
+                        <input type="text" placeholder="Search by Title" onChange={(e)=>setSearch(e.target.value)} />
                         <FaRegCircle className="icon1" />
                     </div>
                     <div className="top-userdata">
@@ -131,31 +150,36 @@ const BookPage = () => {
                             <div className="description">Description</div>
                             <div className="action">Action</div>
                         </div>
-                        {book.map((data, index) => (
-                            <div className="table-data" key={index}>
+                        {book.length > 0 ? (
+                            book.map((data, index) => (
+                                <div className="table-data" key={index}>
                                 <div className="id">{data.id}</div>
                                 <div className="title">{data.title}</div>
                                 <div className="author">{data.author}</div>
                                 <div className="description">{data.description}</div>
                                 <div className="action">
                                     <MdEditSquare className="icon3" onClick={() => openModal1(data)} />
-                                    <RiDeleteBin5Fill className="icon3" onClick={() => {
-                                            openModal2(data); 
-                                            setBookId(data.id); 
-                                        }}/>
+                                    <RiDeleteBin5Fill
+                                    className="icon3"
+                                    onClick={() => {
+                                        openModal2(data);
+                                        setBookId(data.id);
+                                    }}
+                                    />
                                     <MdOpenWith className="icon3" />
                                 </div>
                                 {isModalOpen1 && selectedBook && (
                                     <UpdateBookPopup closeModel={closeModal1} book={selectedBook} />
                                 )}
                                 {isModalOpen2 && selectedBook && (
-                                    <DeleteBookPopup 
-                                        closeModel={closeModal2} 
-                                        bookId ={bookId}
-                                    />
+                                    <DeleteBookPopup closeModel={closeModal2} bookId={bookId} />
                                 )}
-                            </div>
-                        ))}
+                                </div>
+                            ))
+                            ) : (
+                            <div className="empty-message">No books available</div>
+                            )}
+
                     </div>
                 </div>
             </div>
